@@ -1,0 +1,9 @@
+- id: kapitan-compile
+  name: Kapitan Compile
+  description: Compiles Kapitan templates in the repository
+  entry: hooks/kapitan-compile.sh
+  language: script
+  files: ^(components|templates|inventory|secrets).+\.ya?ml$
+  exclude: ^compiled
+  pass_filenames: false
+
