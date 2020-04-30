@@ -1,6 +1,6 @@
-#!/bin/bash
+#!/bin/sh
 
-set -e
+set -eu
 
-docker run -t --rm -v "$(pwd)":/src:delegated deepmind/kapitan:0.27.2 compile
-
+# shellcheck disable=SC2068
+docker run -t --rm -v "${PWD}":/src:delegated deepmind/kapitan:0.27.2 compile $@
